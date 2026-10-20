@@ -20,3 +20,7 @@ resource "aws_subnet" "public" {
   cidr_block = var.public_subnet_cidr
 }
 
+resource "aws_route_table_association" "public-rt-ass" {
+  subnet_id = aws_subnet.public.id
+  route_table_id = aws_route_table.lab3-rt.id
+}
