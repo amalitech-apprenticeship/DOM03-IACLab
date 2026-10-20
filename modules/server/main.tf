@@ -1,7 +1,7 @@
 resource "aws_security_group" "this" {
   name = "public_instance_sg"
   description = "Allows http from all and ssh from My Ip"
-  vpc_id = module.network.vpc_id
+  vpc_id = var.vpc_id
 
 }
 
@@ -25,6 +25,6 @@ resource "aws_instance" "server" {
   instance_type = var.instance_type
   ami = var.ami
   associate_public_ip_address = true
-  subnet_id = module.network.public_subnet_id
+  subnet_id = var.public_subnet_id
   vpc_security_group_ids = [ aws_security_group.this ]
 }
