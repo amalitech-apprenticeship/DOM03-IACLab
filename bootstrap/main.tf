@@ -4,6 +4,11 @@ terraform {
             source = "hashicorp/aws"
             version = "~> 6.0"
         }
+
+        random = {
+            source = "hashicorp/random"
+            version = "~> 3.0"
+        }
     }
 }
 
@@ -15,6 +20,7 @@ resource "random_string" "random"{
     length = 6
     special = false
     lower = true
+    upper = false
 }
 
 resource "aws_s3_bucket" "state_backend" {
@@ -28,7 +34,7 @@ resource "aws_s3_bucket" "state_backend" {
 resource "aws_s3_bucket_versioning" "state_backend" {
     bucket = aws_s3_bucket.state_backend.id
     versioning_configuration {
-      status = Enabled
+      status = "Enabled"
     }
 }
 
