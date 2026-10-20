@@ -1,7 +1,3 @@
-module "network" {
-  source = "../network"
-}
-
 resource "aws_security_group" "this" {
   name = "public_instance_sg"
   description = "Allows http from all and ssh from My Ip"
