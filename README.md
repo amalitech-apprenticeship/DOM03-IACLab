@@ -1,5 +1,3 @@
-
-==============================================================================
  DOM03 - IaC Lab 3: AWS Infrastructure with Terraform
 ==============================================================================
 
@@ -175,21 +173,21 @@ D1. Screenshot - state setup
 ------------------------------------------------------------------------------
 
     i. init
-    screenshots/state-init.png
+  ![alt](screenshots/state-init.png)
     ii. plan
-    screenshots/state-plan.png
+  ![alt](screenshots/state-plan.png)
     iii. apply
-    screenshots/state-apply.png
+  ![alt](screenshots/state-apply.png)
     iv. destory
-    screenshots/state-destroy-before-force.png
-    screenshots/state-destory-after-force.png
+  ![alt](screenshots/state-destroy-before-force.png)
+  ![alt](screenshots/state-destory-after-force.png)
 
 
 ------------------------------------------------------------------------------
 D2. Screenshot - terraform plan
 ------------------------------------------------------------------------------
 
-screenshots/prod-plan.png
+![alt](screenshots/prod-plan.png)
 
 
 
@@ -197,7 +195,7 @@ screenshots/prod-plan.png
 D3. Screenshot - terraform apply
 ------------------------------------------------------------------------------
 
-screenshots/prod-apply.png
+![alt](screenshots/prod-apply.png)
 
 
 
@@ -205,7 +203,7 @@ screenshots/prod-apply.png
 D4. Screenshot - terraform destroy
 ------------------------------------------------------------------------------
 
-screenshots/prod-destory.png
+![alt](screenshots/prod-destory.png)
 
 
 
@@ -213,7 +211,7 @@ screenshots/prod-destory.png
 D5. AWS Console - EC2 instance
 ------------------------------------------------------------------------------
 
-  screenshots/instance.png
+  ![alt](screenshots/instance.png)
 
 ------------------------------------------------------------------------------
 D6. Proof of remote backend configuration
@@ -221,14 +219,14 @@ D6. Proof of remote backend configuration
 
   S3 bucket (showing prod/terraform.tfstate)
 
-  screenshots/state-bucket.png
-
-  screenshots/state-in-bucket.png
+  ![alt](screenshots/state-bucket.png
+)
+  ![alt](screenshots/state-in-bucket.png)
 
 
   DynamoDB lock table
 
-  screenshots/dynamo-db.png
+  ![alt](screenshots/dynamo-db.png)
 
 
 
@@ -241,5 +239,3 @@ NOTES
     newer approach is use_lockfile = true in the S3 backend, which stores
     the lock in the bucket itself. I used DynamoDB here because it is a
     lab requirement.
-
-==============================================================================
