@@ -26,5 +26,5 @@ resource "aws_instance" "server" {
   ami = var.ami
   associate_public_ip_address = true
   subnet_id = var.public_subnet_id
-  vpc_security_group_ids = [ aws_security_group.this ]
+  vpc_security_group_ids = [ aws_security_group.this.id ]
 }
