@@ -5,7 +5,7 @@ variable "my_ip" {
 
 variable "instance_type" {
   type = string
-  default = "t3-micro"
+  default = "t3.micro"
 }
 
 variable "ami" {
