@@ -29,6 +29,8 @@ resource "aws_s3_bucket" "state_backend" {
     lifecycle {
       prevent_destroy = true
     }
+    # Only to be used when you want to force delete the bucket with all it's versions
+    # force_destroy = true
 }
 
 resource "aws_s3_bucket_versioning" "state_backend" {
